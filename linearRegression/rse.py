@@ -43,12 +43,18 @@ SSR=df.sum()['SSR']
 SST=df.sum()['SST']
 R2 = SSR/SST
 
-print(df.head())
-
 plt.plot(x,ypred)
 plt.plot(x,df['ymodel'], "b")
 plt.plot(x,yact,'ro')
 plt.plot(x,yavg)
 plt.title('Actual vs Predicted vs Model')
+
+n = len(df['Input_Variable(X)'])
+df['SSD']=(df['Actual_Output(yact)']-df['ymodel'])**2
+SSD=df.sum()['SSD']
+RSE=np.sqrt(SSD/(n-2))
+
+print(df.head())
+print(RSE)
 
 
