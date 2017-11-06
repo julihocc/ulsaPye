@@ -40,6 +40,8 @@ plt.title('Actual vs Predicted')
 df['SSR']=(df['Predicted_Output(ypred)']-ymean)**2
 df['SST']=(df['Actual_Output(yact)']-ymean)**2
 SSR=df.sum()['SSR']
+print("SSR=", SSR)
 SST=df.sum()['SST']
+print("SST=", SST)
 R2 = SSR/SST
 print("R2=",R2)

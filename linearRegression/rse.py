@@ -42,6 +42,7 @@ df['SST']=(df['Actual_Output(yact)']-ymean)**2
 SSR=df.sum()['SSR']
 SST=df.sum()['SST']
 R2 = SSR/SST
+print("R2(modelo)=", R2)
 
 plt.plot(x,ypred)
 plt.plot(x,df['ymodel'], "b")
